@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetAddressCoordinates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressCoordinatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAddressCoordinatesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNearestStations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startLon" type="xs:double" />
+        <xs:element minOccurs="0" name="startLat" type="xs:double" />
+        <xs:element minOccurs="0" name="endLon" type="xs:double" />
+        <xs:element minOccurs="0" name="endLat" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNearestStationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNearestStationsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStartWalkDirections">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startLon" type="xs:double" />
+        <xs:element minOccurs="0" name="startLat" type="xs:double" />
+        <xs:element minOccurs="0" name="endLon" type="xs:double" />
+        <xs:element minOccurs="0" name="endLat" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStartWalkDirectionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStartWalkDirectionsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEndWalkDirections">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startLon" type="xs:double" />
+        <xs:element minOccurs="0" name="startLat" type="xs:double" />
+        <xs:element minOccurs="0" name="endLon" type="xs:double" />
+        <xs:element minOccurs="0" name="endLat" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEndWalkDirectionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEndWalkDirectionsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBikingDirections">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startLon" type="xs:double" />
+        <xs:element minOccurs="0" name="startLat" type="xs:double" />
+        <xs:element minOccurs="0" name="endLon" type="xs:double" />
+        <xs:element minOccurs="0" name="endLat" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBikingDirectionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBikingDirectionsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCoordinates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startLon" type="xs:double" />
+        <xs:element minOccurs="0" name="startLat" type="xs:double" />
+        <xs:element minOccurs="0" name="endLon" type="xs:double" />
+        <xs:element minOccurs="0" name="endLat" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCoordinatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getCoordinatesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

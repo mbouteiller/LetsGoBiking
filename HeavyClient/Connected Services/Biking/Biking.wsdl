@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Biking" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/WcfServiceLibrary/Biking/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/WcfServiceLibrary/Biking/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBiking_GetAddressCoordinates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressCoordinates" />
+  </wsdl:message>
+  <wsdl:message name="IBiking_GetAddressCoordinates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressCoordinatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBiking_GetNearestStations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNearestStations" />
+  </wsdl:message>
+  <wsdl:message name="IBiking_GetNearestStations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNearestStationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBiking_GetStartWalkDirections_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStartWalkDirections" />
+  </wsdl:message>
+  <wsdl:message name="IBiking_GetStartWalkDirections_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStartWalkDirectionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBiking_GetEndWalkDirections_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEndWalkDirections" />
+  </wsdl:message>
+  <wsdl:message name="IBiking_GetEndWalkDirections_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEndWalkDirectionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBiking_GetBikingDirections_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBikingDirections" />
+  </wsdl:message>
+  <wsdl:message name="IBiking_GetBikingDirections_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBikingDirectionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBiking_getCoordinates_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCoordinates" />
+  </wsdl:message>
+  <wsdl:message name="IBiking_getCoordinates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCoordinatesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBiking">
+    <wsdl:operation name="GetAddressCoordinates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBiking/GetAddressCoordinates" message="tns:IBiking_GetAddressCoordinates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBiking/GetAddressCoordinatesResponse" message="tns:IBiking_GetAddressCoordinates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNearestStations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBiking/GetNearestStations" message="tns:IBiking_GetNearestStations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBiking/GetNearestStationsResponse" message="tns:IBiking_GetNearestStations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStartWalkDirections">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBiking/GetStartWalkDirections" message="tns:IBiking_GetStartWalkDirections_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBiking/GetStartWalkDirectionsResponse" message="tns:IBiking_GetStartWalkDirections_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEndWalkDirections">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBiking/GetEndWalkDirections" message="tns:IBiking_GetEndWalkDirections_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBiking/GetEndWalkDirectionsResponse" message="tns:IBiking_GetEndWalkDirections_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBikingDirections">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBiking/GetBikingDirections" message="tns:IBiking_GetBikingDirections_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBiking/GetBikingDirectionsResponse" message="tns:IBiking_GetBikingDirections_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCoordinates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBiking/getCoordinates" message="tns:IBiking_getCoordinates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBiking/getCoordinatesResponse" message="tns:IBiking_getCoordinates_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Soap" type="tns:IBiking">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAddressCoordinates">
+      <soap:operation soapAction="http://tempuri.org/IBiking/GetAddressCoordinates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNearestStations">
+      <soap:operation soapAction="http://tempuri.org/IBiking/GetNearestStations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStartWalkDirections">
+      <soap:operation soapAction="http://tempuri.org/IBiking/GetStartWalkDirections" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEndWalkDirections">
+      <soap:operation soapAction="http://tempuri.org/IBiking/GetEndWalkDirections" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBikingDirections">
+      <soap:operation soapAction="http://tempuri.org/IBiking/GetBikingDirections" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCoordinates">
+      <soap:operation soapAction="http://tempuri.org/IBiking/getCoordinates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Biking">
+    <wsdl:port name="Soap" binding="tns:Soap">
+      <soap:address location="http://localhost:8733/WcfServiceLibrary/Biking/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,8 @@
+45.7837,4.794485
+45.77752,4.844922
+
+
+start : 4.791202,45.786766
+15 Avenue Rosa Parks
+end   : 4.844489,45.775232
+10 Rue du Commandant Faurax
