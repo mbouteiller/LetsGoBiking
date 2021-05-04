@@ -52,8 +52,8 @@ namespace WcfServiceLibrary
             Station[] stations = JsonSerializer.Deserialize<Station[]>(stationsString);
 
             Station[] answer = new Station[2];
-            answer[0] = processing.getClosestStation(startLon, startLat, stations);
-            answer[1] = processing.getClosestStation(endLon, endLat, stations);
+            answer[0] = processing.getClosestStationStart(startLon, startLat, stations);
+            answer[1] = processing.getClosestStationEnd(endLon, endLat, stations);
 
             return JsonSerializer.Serialize(answer);
         }

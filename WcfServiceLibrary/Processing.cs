@@ -30,7 +30,7 @@ namespace WcfServiceLibrary
             return deg * (Math.PI / 180);
         }
 
-        public Station getClosestStation(double lon, double lat, Station[] stations) 
+        public Station getClosestStationEnd(double lon, double lat, Station[] stations) 
         {
             Station nearest = stations[0];
             double bestDistance = getDistanceFrom2GpsCoordinates(lat, lon, stations[0].position.lat, stations[0].position.lng);
@@ -38,6 +38,27 @@ namespace WcfServiceLibrary
             foreach (Station station in stations)
             {
                 if (station.available_bike_stands > 0)
+                {
+                    var currentDistance = getDistanceFrom2GpsCoordinates(lat, lon, station.position.lat, station.position.lng);
+                    if (currentDistance < bestDistance)
+                    {
+                        bestDistance = currentDistance;
+                        nearest = station;
+                    }
+                }
+            }
+
+            return nearest;
+        }
+
+        public Station getClosestStationStart(double lon, double lat, Station[] stations)
+        {
+            Station nearest = stations[0];
+            double bestDistance = getDistanceFrom2GpsCoordinates(lat, lon, stations[0].position.lat, stations[0].position.lng);
+
+            foreach (Station station in stations)
+            {
+                if (station.available_bikes > 0)
                 {
                     var currentDistance = getDistanceFrom2GpsCoordinates(lat, lon, station.position.lat, station.position.lng);
                     if (currentDistance < bestDistance)

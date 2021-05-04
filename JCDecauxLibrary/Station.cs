@@ -15,6 +15,7 @@ namespace JCDecauxLibrary
         public string status { get; set; }
         public Position position { get; set; }
         public int available_bike_stands { get; set; }
+        public int available_bikes { get; set; }
 
 
         public override string ToString()
@@ -27,7 +28,8 @@ namespace JCDecauxLibrary
                 + address + " "
                 + status + " "
                 + position.ToString()
-                + " Stands available : " + available_bike_stands;
+                + " Stands available : " + available_bike_stands
+                + " Bikes available : " + available_bikes;
 
             return description;
         }
